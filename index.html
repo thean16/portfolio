@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>CHHENG Sothean | Data Science Portfolio</title>
+  <meta name="description" content="Portfolio of CHHENG Sothean — Data Science student at ITC specializing in Data Analysis, Data Engineering, and Machine Learning." />
+  <meta name="author" content="CHHENG Sothean" />
+
+  <!-- Google Fonts: Fira Code (mono) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Sothean</a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link"><span class="hash">#</span>home</a></li>
+        <li><a href="#projects" class="nav-link"><span class="hash">#</span>projects</a></li>
+        <li><a href="#skills" class="nav-link"><span class="hash">#</span>skills</a></li>
+        <li><a href="#about" class="nav-link"><span class="hash">#</span>about-me</a></li>
+        <li><a href="#contact" class="nav-link"><span class="hash">#</span>contacts</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+
+      <!-- Left: Text content -->
+      <div class="hero-text">
+        <h1 class="hero-heading">
+          Sothean is a <span class="highlight">data scientist</span> and
+          <span class="highlight">data engineer</span>
+        </h1>
+        <p class="hero-desc">
+          I craft data pipelines, build dashboards, and develop machine learning
+          solutions. Turning raw data into real insights.
+        </p>
+        <a href="#contact" class="btn btn-primary">Contact me!</a>
+      </div>
+
+      <!-- Right: Photo with dot decoration -->
+      <div class="hero-image">
+        <div class="hero-photo-wrapper">
+          <img src="assets/profile.png" alt="CHHENG Sothean" />
+          <div class="dot-grid dot-grid-top"></div>
+          <div class="dot-grid dot-grid-bottom"></div>
+        </div>
+        <div class="hero-status">
+          <div class="status-dot"></div>
+          Currently studying at <span class="highlight">ITC</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Quote bar -->
+    <div class="quote-bar">
+      <div class="container">
+        <blockquote class="quote">
+          <div class="quote-mark">&ldquo;</div>
+          <p>Without data, you're just another person with an opinion.</p>
+          <cite>&mdash; W. Edwards Deming</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><span class="hash">#</span>projects</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-preview">
+            <img src="assets/air-quality-dashboard.png" alt="Cambodia Air Quality Data Pipeline" loading="lazy" />
+          </div>
+          <div class="project-tags">
+            <span>PySpark</span>
+            <span>SQL Server</span>
+            <span>Power BI</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Air Quality Pipeline</h3>
+            <p class="project-desc">End-to-end pipeline collecting live pollution data from Open-Meteo API for 5 Cambodian cities, processed with PySpark and stored in SQL Server.</p>
+            <div class="project-actions">
+              <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Live ↗</a>
+              <button class="btn btn-sm btn-ghost" onclick="openModal('modal-air-quality')">Details →</button>
+              <a href="#" class="btn btn-sm btn-ghost" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-preview">
+            <img src="assets/aba-dashboard.png" alt="ABA Transaction Analysis Dashboard" loading="lazy" />
+          </div>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>pandas</span>
+            <span>Power BI</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">ABA Transaction Dashboard</h3>
+            <p class="project-desc">Parsed 5,509 ABA Bank Telegram payment notifications into structured data. Analyzed USD 79,347.90 across 3,678 customers.</p>
+            <div class="project-actions">
+              <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Live ↗</a>
+              <button class="btn btn-sm btn-ghost" onclick="openModal('modal-aba')">Details →</button>
+              <a href="#" class="btn btn-sm btn-ghost" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-preview">
+            <img src="assets/covid-dashboard.png" alt="COVID-19 EDA & Machine Learning" loading="lazy" />
+          </div>
+          <div class="project-tags">
+            <span>scikit-learn</span>
+            <span>Streamlit</span>
+            <span>pandas</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">COVID-19 EDA &amp; ML</h3>
+            <p class="project-desc">Exploratory data analysis and machine learning on COVID-19 trends. Built Streamlit dashboard for interactive insight presentation.</p>
+            <div class="project-actions">
+              <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Live ↗</a>
+              <button class="btn btn-sm btn-ghost" onclick="openModal('modal-covid')">Details →</button>
+              <a href="#" class="btn btn-sm btn-ghost" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><span class="hash">#</span>skills</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Decorative dots + skills grid layout -->
+      <div class="skills-layout">
+        <div class="skills-decoration">
+          <div class="dot-pattern"></div>
+          <div class="dot-pattern"></div>
+          <div class="skill-icon-block">
+            <div class="skill-icon-row">
+              <span class="skill-emoji">📊</span>
+              <span class="skill-emoji">🐍</span>
+              <span class="skill-emoji">⚙️</span>
+            </div>
+            <div class="skill-icon-row">
+              <span class="skill-emoji">🤖</span>
+              <span class="skill-emoji">📈</span>
+              <span class="skill-emoji">🗄️</span>
+            </div>
+          </div>
+          <div class="dot-pattern"></div>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-box">
+            <h3 class="skill-box-title">Languages</h3>
+            <div class="skill-divider"></div>
+            <ul class="skill-list">
+              <li>Python</li>
+              <li>SQL</li>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+
+          <div class="skill-box">
+            <h3 class="skill-box-title">Data Analysis</h3>
+            <div class="skill-divider"></div>
+            <ul class="skill-list">
+              <li>pandas</li>
+              <li>NumPy</li>
+              <li>Matplotlib</li>
+              <li>Excel</li>
+              <li>Power BI</li>
+              <li>Jupyter Notebook</li>
+            </ul>
+          </div>
+
+          <div class="skill-box">
+            <h3 class="skill-box-title">Data Engineering</h3>
+            <div class="skill-divider"></div>
+            <ul class="skill-list">
+              <li>PySpark</li>
+              <li>Apache Spark</li>
+              <li>SQL Server</li>
+              <li>ETL Pipelines</li>
+              <li>API Integration</li>
+              <li>CSV/JSON Processing</li>
+            </ul>
+          </div>
+
+          <div class="skill-box">
+            <h3 class="skill-box-title">Machine Learning</h3>
+            <div class="skill-divider"></div>
+            <ul class="skill-list">
+              <li>scikit-learn</li>
+              <li>Regression</li>
+              <li>Classification</li>
+              <li>Model Evaluation</li>
+              <li>Data Preprocessing</li>
+            </ul>
+          </div>
+
+          <div class="skill-box">
+            <h3 class="skill-box-title">Tools</h3>
+            <div class="skill-divider"></div>
+            <ul class="skill-list">
+              <li>Git / GitHub</li>
+              <li>VS Code</li>
+              <li>SSMS</li>
+              <li>Power BI Desktop</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><span class="hash">#</span>about-me</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Hello, I'm Sothean!</p>
+          <p>
+            I am a Data Science student at the Institute of Technology of Cambodia with
+            hands-on experience in data analysis, machine learning, dashboard development,
+            and end-to-end data pipeline projects.
+          </p>
+          <p>
+            I enjoy transforming raw data into useful insights through Python, SQL, Power BI,
+            PySpark, and SQL Server. I am currently seeking internship opportunities where I
+            can apply my skills to solve real business and data problems.
+          </p>
+
+          <div class="about-info">
+            <div class="info-item">
+              <span class="info-icon">📍</span>
+              <span>Phnom Penh, Cambodia</span>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">🎓</span>
+              <span>Institute of Technology of Cambodia</span>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">📊</span>
+              <span>Applied Mathematics &amp; Statistics — Data Science</span>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">🔬</span>
+              <span>Data Analysis · Data Engineering · ML</span>
+            </div>
+          </div>
+
+          <a href="assets/resume.pdf" class="btn btn-primary" download>Download Resume →</a>
+        </div>
+
+        <div class="about-photo">
+          <div class="about-photo-wrapper">
+            <img src="assets/profile.png" alt="CHHENG Sothean" loading="lazy" />
+            <div class="dot-grid dot-grid-corner"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><span class="hash">#</span>contacts</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-text">
+          <p>
+            I'm currently open to internship opportunities in Data Analysis,
+            Data Engineering, and Machine Learning. Feel free to reach out!
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Message me here</h3>
+          <div class="contact-links">
+            <a href="mailto:thean160220@gmail.com" class="contact-link">
+              <span class="contact-link-icon">✉</span>
+              thean160220@gmail.com
+            </a>
+            <a href="https://github.com/thean16" class="contact-link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-link-icon">⌘</span>
+              github.com/thean16
+            </a>
+            <a href="#" class="contact-link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-link-icon">in</span>
+              linkedin.com/in/your-profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-name">Sothean</div>
+        <p class="footer-desc">Data Science student &amp; aspiring Data Engineer</p>
+      </div>
+      <div class="footer-right">
+        <p class="footer-copy">&copy; 2026 CHHENG Sothean</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== PROJECT DETAIL MODALS ===== -->
+
+  <!-- Modal: Air Quality -->
+  <div class="modal-overlay" id="modal-air-quality">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('modal-air-quality')" aria-label="Close">&times;</button>
+      <h3 class="modal-title">Cambodia Air Quality Data Pipeline</h3>
+      <div class="modal-section">
+        <h4>Problem</h4>
+        <p>Cambodia lacks centralized, cleaned air quality data infrastructure. Raw API data is noisy, unstructured, and not ready for analysis or reporting without significant processing.</p>
+      </div>
+      <div class="modal-section">
+        <h4>Data Source</h4>
+        <p>Open-Meteo Air Quality API — real-time pollutant concentrations for Phnom Penh, Siem Reap, Battambang, Kampot, and Sihanoukville.</p>
+      </div>
+      <div class="modal-section">
+        <h4>Workflow</h4>
+        <ol>
+          <li>Collect hourly air quality data via Python requests</li>
+          <li>Clean and transform raw JSON using PySpark DataFrames</li>
+          <li>Engineer features: AQI category, date/hour/month extraction</li>
+          <li>Load into SQL Server tables (city summaries, pollutant averages)</li>
+          <li>Connect Power BI for interactive dashboard reporting</li>
+        </ol>
+      </div>
+      <div class="modal-section">
+        <h4>Tools</h4>
+        <div class="modal-tags">
+          <span>Python</span><span>PySpark</span><span>Apache Spark</span><span>SQL Server</span><span>Power BI</span><span>Open-Meteo API</span>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Key Results</h4>
+        <ul>
+          <li>Automated ETL pipeline from API ingestion to SQL Server</li>
+          <li>Multi-city, multi-pollutant data with AQI categorization</li>
+          <li>Power BI dashboard for city-level air quality monitoring</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>What I Learned</h4>
+        <p>End-to-end data pipeline development, real-time API integration, distributed processing with PySpark, and connecting analytical databases to BI tools.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: ABA -->
+  <div class="modal-overlay" id="modal-aba">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('modal-aba')" aria-label="Close">&times;</button>
+      <h3 class="modal-title">ABA Transaction Analysis Dashboard</h3>
+      <div class="modal-section">
+        <h4>Problem</h4>
+        <p>ABA Bank Telegram payment notifications are unstructured text. Extracting insights requires automated parsing and analysis.</p>
+      </div>
+      <div class="modal-section">
+        <h4>Data Source</h4>
+        <p>Exported ABA Bank payment notification messages from Telegram — transaction amounts, payment methods, customer names, and timestamps.</p>
+      </div>
+      <div class="modal-section">
+        <h4>Workflow</h4>
+        <ol>
+          <li>Export raw Telegram payment notification messages</li>
+          <li>Parse text into structured data with Python regex and pandas</li>
+          <li>Clean and validate extracted fields</li>
+          <li>Perform exploratory analysis on revenue and customer behavior</li>
+          <li>Build Power BI dashboard for transaction analytics</li>
+        </ol>
+      </div>
+      <div class="modal-section">
+        <h4>Tools</h4>
+        <div class="modal-tags">
+          <span>Python</span><span>pandas</span><span>Regex</span><span>Jupyter Notebook</span><span>Power BI</span>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Key Results</h4>
+        <ul>
+          <li>Parsed 5,509 transactions totaling USD 79,347.90</li>
+          <li>3,678 unique customers across 48 payment methods</li>
+          <li>Dashboard showing revenue performance and temporal patterns</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>What I Learned</h4>
+        <p>Text parsing with regex, data cleaning with pandas, and translating unstructured data into actionable BI dashboards.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: COVID-19 -->
+  <div class="modal-overlay" id="modal-covid">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('modal-covid')" aria-label="Close">&times;</button>
+      <h3 class="modal-title">COVID-19 EDA &amp; Machine Learning</h3>
+      <div class="modal-section">
+        <h4>Problem</h4>
+        <p>Understanding COVID-19 spread patterns and death rates requires systematic exploratory analysis and predictive modeling.</p>
+      </div>
+      <div class="modal-section">
+        <h4>Data Source</h4>
+        <p>Public COVID-19 datasets with confirmed cases, deaths, recoveries, and active cases by country and date.</p>
+      </div>
+      <div class="modal-section">
+        <h4>Workflow</h4>
+        <ol>
+          <li>Load and explore dataset structure, distributions, missing values</li>
+          <li>Clean data: handle missing values, select features, transform variables</li>
+          <li>EDA: visualize confirmed/recovered/death trends by country</li>
+          <li>Build and evaluate ML models for case prediction</li>
+          <li>Deploy Streamlit dashboard for interactive insights</li>
+        </ol>
+      </div>
+      <div class="modal-section">
+        <h4>Tools</h4>
+        <div class="modal-tags">
+          <span>Python</span><span>NumPy</span><span>pandas</span><span>scikit-learn</span><span>Streamlit</span>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Key Results</h4>
+        <ul>
+          <li>Identified key COVID-19 trends across countries and time periods</li>
+          <li>Built ML models for case prediction</li>
+          <li>Interactive Streamlit dashboard for exploration and results</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4>What I Learned</h4>
+        <p>End-to-end data science from EDA to modeling to deployment. Feature engineering, model evaluation, and building interactive data applications.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="back-to-top" aria-label="Scroll to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
